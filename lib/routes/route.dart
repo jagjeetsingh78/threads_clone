@@ -8,7 +8,7 @@ class Routes{
   static final pages = [
      GetPage(name: RouteName.home, page: () => Home()),
      GetPage(name: RouteName.Login, page: () => Loginpage()),
-     GetPage(name: RouteName.Register, page: () => RegisterPage()),
+     GetPage(name: RouteName.Register, page: () => Register()),
   
      
   ];
