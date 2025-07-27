@@ -15,6 +15,7 @@ Future<void> main() async {
   // If you want to initialize Supabase, uncomment and use the following lines:
   // final supabaseUrl = dotenv.env['SUPABASE_URL'];
   // final supabaseKey = dotenv.env['SUPABASE_KEY'];
+  
   await Supabase.initialize(url: Env.supabaseUrl, anonKey:Env.supabasekey);
   developer.log(Env.supabaseUrl);
   runApp(const MyApp());

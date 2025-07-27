@@ -4,7 +4,7 @@ import 'package:get/route_manager.dart';
 import 'package:threads_project/routes/route_name.dart' show RouteName;
 import 'package:threads_project/utils/type_def.dart';
 import 'package:threads_project/widgets/auth_input.dart';
-import './Register.dart';
+import 'register.dart';
 import 'package:flutter/gestures.dart';
 import 'package:form_validator/form_validator.dart';
 class Loginpage extends StatefulWidget {
