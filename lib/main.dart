@@ -16,8 +16,8 @@ Future<void> main() async {
   // final supabaseUrl = dotenv.env['SUPABASE_URL'];
   // final supabaseKey = dotenv.env['SUPABASE_KEY'];
   
-  await Supabase.initialize(url: Env.supabaseUrl, anonKey:Env.supabasekey);
-  developer.log(Env.supabaseUrl);
+  await Supabase.initialize(url:Env.supabaseUrl, anonKey:Env.supabasekey);
+  
   runApp(const MyApp());
 }
 

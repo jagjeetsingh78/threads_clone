@@ -19,6 +19,16 @@ class _LoginpageState extends State<Loginpage> {
   final TextEditingController _emailcontroller = TextEditingController();
   final TextEditingController _password = TextEditingController();
   final TextEditingController _name = TextEditingController();
+
+//  this is the login method we use to login 
+Void login(){
+  if(_form.currentState!.validate()){
+    print('everything is good');
+  }
+}
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,10 +82,8 @@ class _LoginpageState extends State<Loginpage> {
                         ),
                         SizedBox(height: 15),
                         ElevatedButton(
-                          onPressed: () {
-                                 if (_form.currentState!.validate()) {
-                              // Do your login logic here
-                            }},
+                          onPressed: login
+                              
                           child: const Text('Login'),
                           style: ButtonStyle(
                             foregroundColor: WidgetStateProperty.all(

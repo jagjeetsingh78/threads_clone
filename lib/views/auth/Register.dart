@@ -18,6 +18,17 @@ class _RegisterState extends State<Register> {
   final TextEditingController _password = TextEditingController();
   final TextEditingController _conformpassword = TextEditingController();
 
+// this is the code written to submit the value 
+void submit(){
+  if(_form.currentState!.validate()){
+    print('everything is good');
+  }
+}
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,20 +89,24 @@ class _RegisterState extends State<Register> {
                         ),
                         SizedBox(height: 20,),
                         AuthInput(
-                          label: 'Password',
-                          hintText: 'Enter your password',
+                          label: 'Confirm Password',
+                          hintText: 'Confirm  your password',
                           ispassword: true,
                           // Controller: _passwordController,
                           controller: _conformpassword,
-                          validatorCallback: ValidationBuilder().minLength(6).maxLength(6).build(),
+                          validatorCallback:(arg){
+                            if(_password.text!=arg){
+                              return "confirm password didnot matched";
+
+                            }
+                             return null;
+                          },
                         ),
                         const SizedBox(height: 15),
                         ElevatedButton(
-                          onPressed: () {
-                            if (_form.currentState!.validate()) {
-                              // Do your registration //  here
-                            }
-                          },
+                          onPressed:submit
+                        
+                          
                           child: const Text('Register'),
                           style: ButtonStyle(
                             foregroundColor: MaterialStateProperty.all(
@@ -143,3 +158,5 @@ class _RegisterState extends State<Register> {
     super.dispose();
   }
 }
+
+
